@@ -114,8 +114,5 @@ This project is licensed under the **GNU V3 License**, see the [LICENSE](LICENSE
 ---
 
 ## 🌍 Authors & Team
-
-**Team 11 (Ahmed Hassan, Nolan Witt, JC Migaly, Shounak Deshmukh)** 
-NC State University | CSC/ECE 591-791 Project 2
-
+**Team 11 (Ahmed Hassan, Nolan Witt, JC Migaly, Shounak Deshmukh)**
 ---
