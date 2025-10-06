@@ -1,6 +1,24 @@
 <!-- ![Build](https://img.shields.io/github/actions/workflow/status/AhmedOHassan/2025Fall-Team11-Project2/ci.yml?branch=main) -->
-![License](https://img.shields.io/github/license/AhmedOHassan/2025Fall-Team11-Project2)
+<!-- Project Info -->
+[![License](https://img.shields.io/github/license/AhmedOHassan/2025Fall-Team11-Project2)](LICENSE)
+[![Contributions Welcome](https://img.shields.io/badge/Contributions-Welcome-brightgreen.svg)](CONTRIBUTING.md)
+[![Code of Conduct](https://img.shields.io/badge/Code%20of%20Conduct-Active-blue.svg)](CODE_OF_CONDUCT.md)
+[![Install Guide](https://img.shields.io/badge/Install-Guide-important.svg)](INSTALL.md)
+
+<!-- Tech Stack -->
+![Next.js](https://img.shields.io/badge/Next.js-000000?logo=nextdotjs&logoColor=white)
+![Prisma](https://img.shields.io/badge/Prisma-2D3748?logo=prisma&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/TailwindCSS-38B2AC?logo=tailwindcss&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?logo=typescript&logoColor=white)
+![Vercel](https://img.shields.io/badge/Vercel-000000?logo=vercel&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?logo=postgresql&logoColor=white)
+
+<!-- Community -->
+[![Discussions](https://img.shields.io/badge/Chat-Discussions-orange.svg)](../../discussions)
 ![Issues](https://img.shields.io/github/issues/AhmedOHassan/2025Fall-Team11-Project2)
+![Pull Requests](https://img.shields.io/github/issues-pr/AhmedOHassan/2025Fall-Team11-Project2)
+
+<!-- Project Stats -->
 ![Forks](https://img.shields.io/github/forks/AhmedOHassan/2025Fall-Team11-Project2)
 ![Stars](https://img.shields.io/github/stars/AhmedOHassan/2025Fall-Team11-Project2)
 ![Contributors](https://img.shields.io/github/contributors/AhmedOHassan/2025Fall-Team11-Project2)
