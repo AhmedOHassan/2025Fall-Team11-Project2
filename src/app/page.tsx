@@ -40,7 +40,7 @@ export default function HomePage() {
                 Sign Up
               </Link>
               <Link
-                href="/signin"
+                href="/login"
                 className="inline-flex h-12 items-center justify-center rounded-lg bg-white/20 px-6 text-base font-medium text-white transition-transform hover:scale-105 dark:text-white"
               >
                 Login

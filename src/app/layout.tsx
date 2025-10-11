@@ -53,7 +53,7 @@ export default function RootLayout({
               </Link>
 
               <Link
-                href="/signin"
+                href="/login"
                 className="bg-primary/20 inline-flex h-9 items-center justify-center rounded-lg px-3 text-sm font-medium text-gray-900 transition-transform hover:scale-105 dark:text-white"
               >
                 Login
