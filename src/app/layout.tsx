@@ -27,7 +27,7 @@ export default async function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={`${geist.variable}`}>
-      <body>
+      <body {...({ "cz-shortcut-listen": "true" } as any)}>
         <AuthProvider>
           <Header />
           <main>{children}</main>
