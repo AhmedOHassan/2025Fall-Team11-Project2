@@ -1,3 +1,10 @@
+/**
+ * Login page responsible for handling user sign-in.
+ * Renders the login form, performs credential-based sign-in using next-auth,
+ * displays error messages and redirects to the main dashboard on success.
+ *
+ * @author Ahmed Hassan
+ */
 "use client";
 
 import React, { useState } from "react";

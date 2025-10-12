@@ -1,4 +1,11 @@
-import Link from "next/link";
+/**
+ * Home page for the application. Renders the hero section, "How It Works" steps,
+ * and benefit cards for customers, restaurants/platforms, and healthcare partners.
+ *
+ * This file provides the landing content users see at the root route.
+ *
+ * @author Ahmed Hassan
+ */
 import { Card, CardHeader, CardTitle, CardContent } from "~/components/ui/card";
 import Image from "next/image";
 
@@ -30,21 +37,6 @@ export default function HomePage() {
                 recommendations that fit your lifestyle. Make informed food
                 choices, effortlessly.
               </p>
-            </div>
-
-            <div className="mt-8 flex gap-4">
-              <Link
-                href="/signup"
-                className="bg-primary inline-flex h-12 items-center justify-center rounded-lg px-6 text-base font-medium text-gray-900 transition-transform hover:scale-105 dark:text-white"
-              >
-                Sign Up
-              </Link>
-              <Link
-                href="/login"
-                className="inline-flex h-12 items-center justify-center rounded-lg bg-white/20 px-6 text-base font-medium text-white transition-transform hover:scale-105 dark:text-white"
-              >
-                Login
-              </Link>
             </div>
           </div>
         </div>

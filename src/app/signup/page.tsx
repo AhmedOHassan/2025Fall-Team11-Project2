@@ -1,3 +1,11 @@
+/**
+ * Signup page responsible for handling new user registration.
+ * Renders the signup form, validates input (including password length > 6),
+ * posts to the signup API, displays errors, and redirects to the login page
+ * on successful account creation (with a short countdown).
+ *
+ * @author Ahmed Hassan
+ */
 "use client";
 
 import React, { useState, useEffect, useRef } from "react";

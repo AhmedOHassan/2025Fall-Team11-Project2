@@ -1,6 +1,6 @@
 /**
  * This file handles all API endpoints for /api/sign-up (GET, POST, PUT, DELETE, etc.)
- * 
+ *
  * @author Ahmed Hassan
  */
 import { NextResponse } from "next/server";

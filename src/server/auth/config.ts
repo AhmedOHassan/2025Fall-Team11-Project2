@@ -56,19 +56,27 @@ export const authConfig = {
     }),
   ],
   adapter: PrismaAdapter(db),
+  session: {
+    strategy: "jwt",
+    maxAge: 30 * 24 * 60 * 60, // 30 days
+  },
   callbacks: {
-    session: ({
-      session,
-      user,
-    }: {
-      session: DefaultSession;
-      user: { id: string };
-    }) => ({
-      ...session,
-      user: {
-        ...session.user,
-        id: user.id,
-      },
-    }),
+    jwt: async ({ token, user }: any) => {
+      if (user?.id) {
+        token.id = user.id;
+      }
+      return token;
+    },
+
+    session: async ({ session, token, user }: any) => {
+      const id = user?.id ?? token?.id ?? token?.sub;
+      return {
+        ...session,
+        user: {
+          ...session.user,
+          id,
+        },
+      };
+    },
   },
 } satisfies NextAuthConfig;

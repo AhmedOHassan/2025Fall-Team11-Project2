@@ -1,3 +1,12 @@
+/**
+ * Main dashboard placeholder page.
+ * This file renders a simple welcome placeholder while the full SnapMeal AI
+ * main application (photo upload, analysis, personalized recommendations,
+ * etc.) is being implemented. Replace or extend this page with the actual
+ * dashboard UI and functionality when ready.
+ *
+ * @author Ahmed Hassan
+ */
 "use client";
 
 export default function MainPage() {
