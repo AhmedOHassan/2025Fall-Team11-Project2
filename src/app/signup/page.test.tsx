@@ -1,3 +1,13 @@
+/**
+ * Unit tests for Sign Up Page.
+ *
+ * This file contains tests for rendering the signup form,
+ * input validation, user interactions, submission logic,
+ * success and error handling, and the countdown/redirect behavior
+ * that runs after a successful signup.
+ *
+ * @author Ahmed Hassan
+ */
 import React from "react";
 import { render, screen, waitFor, fireEvent } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
@@ -228,7 +238,7 @@ describe("SignUpPage", () => {
       target: { value: "S" },
     });
     fireEvent.change(screen.getByLabelText(/Email/i), {
-      target: { value: "s@e.com" },
+      target: { value: "s@gmail.com" },
     });
     fireEvent.change(screen.getByLabelText(/Password/i), {
       target: { value: "validpass" },
@@ -297,7 +307,7 @@ describe("SignUpPage", () => {
     });
 
     fireEvent.change(nameInput, { target: { value: "Timer User" } });
-    fireEvent.change(emailInput, { target: { value: "timer@example.com" } });
+    fireEvent.change(emailInput, { target: { value: "timer@gmail.com" } });
     fireEvent.change(passwordInput, { target: { value: "validpass" } });
     fireEvent.click(submitButton);
 
