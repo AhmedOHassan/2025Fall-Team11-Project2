@@ -22,7 +22,7 @@ jobs:
         run: npm run coverage
 
       - name: Upload coverage HTML artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: coverage-html
           path: coverage
