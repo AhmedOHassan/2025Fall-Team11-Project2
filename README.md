@@ -87,34 +87,47 @@ Ordering food online is convenient, but users often don’t know what’s in the
 
 ## 🛠️ Setup & Installation
 
+### 1. Install PostgreSQL
+SnapMealAI requires a local PostgreSQL database for storing user and application data.  
+If you don’t have PostgreSQL installed yet, please download and install it by following the official instructions here: [https://www.postgresql.org/download/](https://www.postgresql.org/download/)
+
+### 2. Clone and Setup the Project
 ```bash
-# Clone the repo
 git clone https://github.com/AhmedOHassan/2025Fall-Team11-Project2.git
 cd 2025Fall-Team11-Project2
-
-# Install dependencies
-npm install
-
-# Setup environment variables
-cp .env.example .env
-
-# Generate authentication secret
-# A .env.local file will be created in the project directory (2025Fall-Team11-Project2)
-# It will contain a generated AUTH_SECRET value.
-# Copy the AUTH_SECRET from .env.local and paste it into your .env file under AUTH_SECRET.
-npx auth secret
-
-# Update your database connection string in the .env file
-# Replace 'password' with your actual PostgreSQL password
-DATABASE_URL="postgresql://postgres:password@localhost:5432/2025Fall-Team11-Project2"
-
-# Run Prisma migrations
-npx prisma migrate dev
-
-# Start the development server
-npm run dev
 ```
 
+### 3. Install Dependencies
+```bash
+npm install
+```
+
+### 4. Configure Environment Variables
+```bash
+cp .env.example .env
+```
+
+### 5. Generate Authentication Secret
+```bash
+npx auth secret
+```
+A .env.local file will be created in the project directory (2025Fall-Team11-Project2). It will contain a generated AUTH_SECRET value. Copy the AUTH_SECRET from .env.local and paste it into your .env file under AUTH_SECRET.
+
+### 6. Update the Database Connection String
+```
+DATABASE_URL="postgresql://postgres:password@localhost:5432/2025Fall-Team11-Project2"
+```
+Update your database connection string in the .env file. Replace 'password' with your actual PostgreSQL password
+
+### 7. Run Prisma Migrations
+```bash
+npx prisma migrate dev
+```
+
+### 8. Start the Development Server
+```bash
+npm run dev
+```
 ---
 
 ## 🧪 Testing
