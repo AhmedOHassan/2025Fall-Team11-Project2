@@ -12,6 +12,7 @@ export default defineConfig({
       provider: "istanbul",
       reporter: ["text", "lcov", "html"],
       reportsDirectory: "./coverage",
+      include: ["src/app/**"],
       exclude: ["**/node_modules/**", "**/dist/**", "**/.next/**"],
     },
   },
