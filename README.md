@@ -1,5 +1,6 @@
 <!-- ![Build](https://img.shields.io/github/actions/workflow/status/AhmedOHassan/2025Fall-Team11-Project2/ci.yml?branch=main) -->
 <!-- Project Info -->
+[![coverage](https://codecov.io/gh/AhmedOHassan/2025Fall-Team11-Project2/branch/main/graph/badge.svg)](https://codecov.io/gh/AhmedOHassan/2025Fall-Team11-Project2)
 [![License](https://img.shields.io/github/license/AhmedOHassan/2025Fall-Team11-Project2)](LICENSE)
 [![Contributions Welcome](https://img.shields.io/badge/Contributions-Welcome-brightgreen.svg)](CONTRIBUTING.md)
 [![Code of Conduct](https://img.shields.io/badge/Code%20of%20Conduct-Active-blue.svg)](CODE_OF_CONDUCT.md)
