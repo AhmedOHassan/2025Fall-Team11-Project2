@@ -7,7 +7,7 @@ This document explains how to install and run **SnapMealAI** locally.
 ## ⚙️ Prerequisites
 
 Before starting, ensure the following are installed on your system:
-- **Node.js** (v18 or higher)
+- **Node.js** (v20 or higher)
 - **npm** (comes with Node.js)
 - **PostgreSQL** (for database storage)
 
