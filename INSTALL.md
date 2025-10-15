@@ -1,4 +1,4 @@
-# 🍽️ SnapMealAI Installation Guide
+# SnapMealAI Installation Guide
 
 This document explains how to install and run **SnapMealAI** locally.
 
