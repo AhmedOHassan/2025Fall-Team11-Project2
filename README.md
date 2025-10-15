@@ -55,9 +55,9 @@ Ordering food online is convenient, but users often don’t know what’s in the
 ## 🗓️ Development Roadmap
 
 ### **October – Release 1: Prototype**
+- Implement authentication flow with Signup, Login, and Home page.
 - Build frontend with photo upload and capture interface.
 - Connect GPT API to analyze menu text.
-- Mock or GPT-powered meal recognition model.
 - Display nutrition summary + simple delivery recommendation.
 
 ### **November – Release 2: Enhanced System**
@@ -96,6 +96,16 @@ npm install
 
 # Setup environment variables
 cp .env.example .env
+
+# Generate authentication secret
+# A .env.local file will be created in the project directory (2025Fall-Team11-Project2)
+# It will contain a generated AUTH_SECRET value.
+# Copy the AUTH_SECRET from .env.local and paste it into your .env file under AUTH_SECRET.
+npx auth secret
+
+# Update your database connection string in the .env file
+# Replace 'password' with your actual PostgreSQL password
+DATABASE_URL="postgresql://postgres:password@localhost:5432/2025Fall-Team11-Project2"
 
 # Run Prisma migrations
 npx prisma migrate dev
