@@ -1,7 +1,7 @@
 import { PrismaAdapter } from "@auth/prisma-adapter";
 import { type DefaultSession, type NextAuthConfig } from "next-auth";
-import DiscordProvider from "next-auth/providers/discord";
-
+import CredentialsProvider from "next-auth/providers/credentials";
+import { compare } from "bcrypt";
 import { db } from "~/server/db";
 
 /**
@@ -32,25 +32,58 @@ declare module "next-auth" {
  */
 export const authConfig = {
   providers: [
-    DiscordProvider,
-    /**
-     * ...add more providers here.
-     *
-     * Most other providers require a bit more work than the Discord provider. For example, the
-     * GitHub provider requires you to add the `refresh_token_expires_in` field to the Account
-     * model. Refer to the NextAuth.js docs for the provider you want to use. Example:
-     *
-     * @see https://next-auth.js.org/providers/github
-     */
-  ],
-  adapter: PrismaAdapter(db),
-  callbacks: {
-    session: ({ session, user }) => ({
-      ...session,
-      user: {
-        ...session.user,
-        id: user.id,
+    CredentialsProvider({
+      name: "Credentials",
+      credentials: {
+        email: { label: "Email", type: "text" },
+        password: { label: "Password", type: "password" },
+      },
+      authorize: async (credentials) => {
+        if (
+          !credentials ||
+          typeof credentials.email !== "string" ||
+          typeof credentials.password !== "string"
+        ) {
+          return null;
+        }
+
+        const user = await db.user.findUnique({
+          where: { email: credentials.email },
+        });
+        if (!user || !user.password) return null;
+        const valid = await compare(credentials.password, user.password);
+        if (!valid) return null;
+        return {
+          id: user.id,
+          name: user.name ?? undefined,
+          email: user.email ?? undefined,
+          image: user.image ?? undefined,
+        };
       },
     }),
+  ],
+  adapter: PrismaAdapter(db),
+  session: {
+    strategy: "jwt",
+    maxAge: 30 * 24 * 60 * 60, // 30 days
+  },
+  callbacks: {
+    jwt: async ({ token, user }: any) => {
+      if (user?.id) {
+        token.id = user.id;
+      }
+      return token;
+    },
+
+    session: async ({ session, token, user }: any) => {
+      const id = user?.id ?? token?.id ?? token?.sub;
+      return {
+        ...session,
+        user: {
+          ...session.user,
+          id,
+        },
+      };
+    },
   },
 } satisfies NextAuthConfig;
