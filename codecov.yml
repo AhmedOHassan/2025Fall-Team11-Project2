@@ -1,0 +1,13 @@
+ignore:
+  - "src/components/**"
+  - "src/hooks/**"
+  - "src/lib/**"
+  - "src/server/**"
+  - "src/styles/**"
+  - "src/env.js"
+
+coverage:
+  status:
+    project:
+      default:
+        target: 80%

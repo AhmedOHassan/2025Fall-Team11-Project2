@@ -1,29 +1,109 @@
-# Create T3 App
+<!-- ![Build](https://img.shields.io/github/actions/workflow/status/AhmedOHassan/2025Fall-Team11-Project2/ci.yml?branch=main) -->
+<!-- Project Info -->
+[![coverage](https://codecov.io/gh/AhmedOHassan/2025Fall-Team11-Project2/branch/main/graph/badge.svg)](https://codecov.io/gh/AhmedOHassan/2025Fall-Team11-Project2)
+[![License](https://img.shields.io/github/license/AhmedOHassan/2025Fall-Team11-Project2)](LICENSE)
+[![Contributions Welcome](https://img.shields.io/badge/Contributions-Welcome-brightgreen.svg)](CONTRIBUTING.md)
+[![Code of Conduct](https://img.shields.io/badge/Code%20of%20Conduct-Active-blue.svg)](CODE_OF_CONDUCT.md)
+[![Install Guide](https://img.shields.io/badge/Install-Guide-important.svg)](INSTALL.md)
 
-This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3-app`.
+<!-- Tech Stack -->
+![Next.js](https://img.shields.io/badge/Next.js-000000?logo=nextdotjs&logoColor=white)
+![Prisma](https://img.shields.io/badge/Prisma-2D3748?logo=prisma&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/TailwindCSS-38B2AC?logo=tailwindcss&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?logo=typescript&logoColor=white)
+![Vercel](https://img.shields.io/badge/Vercel-000000?logo=vercel&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?logo=postgresql&logoColor=white)
 
-## What's next? How do I make an app with this?
+<!-- Community -->
+[![Discussions](https://img.shields.io/badge/Chat-Discussions-orange.svg)](../../discussions)
+![Issues](https://img.shields.io/github/issues/AhmedOHassan/2025Fall-Team11-Project2)
+![Pull Requests](https://img.shields.io/github/issues-pr/AhmedOHassan/2025Fall-Team11-Project2)
 
-We try to keep this project as simple as possible, so you can start with just the scaffolding we set up for you, and add additional things later when they become necessary.
+<!-- Project Stats -->
+![Forks](https://img.shields.io/github/forks/AhmedOHassan/2025Fall-Team11-Project2)
+![Stars](https://img.shields.io/github/stars/AhmedOHassan/2025Fall-Team11-Project2)
+![Contributors](https://img.shields.io/github/contributors/AhmedOHassan/2025Fall-Team11-Project2)
 
-If you are not familiar with the different technologies used in this project, please refer to the respective docs. If you still are in the wind, please join our [Discord](https://t3.gg/discord) and ask for help.
+# SnapMealAI 🍽️
 
-- [Next.js](https://nextjs.org)
-- [NextAuth.js](https://next-auth.js.org)
-- [Prisma](https://prisma.io)
-- [Drizzle](https://orm.drizzle.team)
-- [Tailwind CSS](https://tailwindcss.com)
-- [tRPC](https://trpc.io)
+**Empowering Smarter Food Choices with AI**
 
-## Learn More
+SnapMealAI helps users make informed, healthy meal decisions by analyzing food images and menus through AI.  
+It provides instant ingredient recognition, calorie estimation, allergen alerts, and dietary suggestions, all in one snap!
 
-To learn more about the [T3 Stack](https://create.t3.gg/), take a look at the following resources:
+---
 
-- [Documentation](https://create.t3.gg/)
-- [Learn the T3 Stack](https://create.t3.gg/en/faq#what-learning-resources-are-currently-available) — Check out these awesome tutorials
+## 🚀 Our Mission
 
-You can check out the [create-t3-app GitHub repository](https://github.com/t3-oss/create-t3-app) — your feedback and contributions are welcome!
+Ordering food online is convenient, but users often don’t know what’s in their meal, especially for visually complex or homemade dishes. Restaurants also struggle to communicate nutritional details quickly.
 
-## How do I deploy this?
+**SnapMealAI** bridges this gap with AI-powered food understanding.
 
-Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/vercel), [Netlify](https://create.t3.gg/en/deployment/netlify) and [Docker](https://create.t3.gg/en/deployment/docker) for more information.
+### 🧠 How It Works
+1. Upload or take a photo of a meal or menu.  
+2. AI analyzes the image/text to identify ingredients.  
+3. SnapMealAI estimates calories, macros, and allergens.  
+4. It provides personalized recommendations, including healthier alternatives and portion suggestions.
+
+### 💡 Impact
+- **Customers:** Make informed and healthier food choices.  
+- **Restaurants:** Provide nutrition transparency and build trust.  
+- **Delivery Platforms/Admins:** Differentiate with AI value-added insights.  
+- **Healthcare Partners:** Integrate AI-driven nutrition analysis with wellness platforms.
+
+---
+
+## 🗓️ Development Roadmap
+
+### **October – Release 1: Prototype**
+- Implement authentication flow with Signup, Login, and Home page.
+- Build frontend with photo upload and capture interface.
+- Connect GPT API to analyze menu text.
+- Display nutrition summary + simple delivery recommendation.
+
+### **November – Release 2: Enhanced System**
+- Add allergen warnings and dietary filters.
+- Suggest healthier alternatives automatically.
+- Save user preferences and meal history.
+- Build admin dashboard for restaurant verification.
+
+---
+
+## 🧩 Tech Stack
+
+| Layer | Technology |
+|-------|-------------|
+| **Frontend** | Next.js (TypeScript), Tailwind CSS, shadcn/ui |
+| **Backend** | Next.js API Routes, Node.js |
+| **ORM** | Prisma |
+| **Database** | PostgreSQL (via Prisma) |
+| **Auth** | NextAuth.js |
+| **Validation** | Zod |
+| **AI** | GPT API (OpenAI) |
+| **CI/CD** | GitHub Actions |
+| **Hosting** | Vercel |
+
+---
+
+## 🛠️ Setup & Installation
+
+To run SnapMealAI locally, follow the full installation guide here: [INSTALL.md](INSTALL.md)
+
+---
+
+## 👥 Contributing
+
+We welcome community contributions!  
+See [CONTRIBUTING.md](CONTRIBUTING.md) for full guidelines.
+
+---
+
+## 📄 License
+
+This project is licensed under the **GNU V3 License**, see the [LICENSE](LICENSE) file for details.
+
+---
+
+## 🌍 Authors & Team
+**Team 11 (Ahmed Hassan, Nolan Witt, JC Migaly, Shounak Deshmukh)**
+---
