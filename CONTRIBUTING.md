@@ -24,14 +24,14 @@ If you’re unsure how to create one, check out the resources at the bottom of t
 
 ## 🔧 Submitting a Pull Request
 
-1. [Fork][fork] and clone the repository.  
+1. Fork and clone the repository.  
 2. Follow the full installation guide here: [INSTALL.md](INSTALL.md)
 4. Create a new branch for your feature or fix:  
    ```bash
    git checkout -b my-feature-branch
    ```
 5. Make your changes and commit them with clear, descriptive messages.  
-6. Push to your fork and [submit a pull request][pr].  
+6. Push to your fork and submit a pull request.  
 7. 🎉 Wait for your PR to be reviewed and merged!
 
 ---
