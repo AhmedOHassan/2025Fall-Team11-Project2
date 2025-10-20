@@ -33,12 +33,28 @@ If both commands return version numbers, Node.js and npm are ready to use.
 
 ## 🐘 Install PostgreSQL
 
-SnapMealAI uses PostgreSQL as its database.
+SnapMealAI uses PostgreSQL as its database. You can install it locally or run it in a Docker container for development.
 
-If you don’t have PostgreSQL installed yet, follow the official download and installation instructions here:  
+### Option 1: Run PostgreSQL with Docker
+
+If you have Docker installed, you can quickly start a PostgreSQL container:
+
+1. Copy the provided `docker-compose.yml` file to your project root.
+2. Start the container:
+	```bash
+	docker-compose up -d
+	```
+3. The database will be available at `localhost:5432` with:
+	- **username:** devuser
+	- **password:** devpass
+	- **database:** devdb
+
+### Option 2: Install PostgreSQL Locally
+
+If you prefer a local installation, follow the official instructions:  
 👉 [https://www.postgresql.org/download/](https://www.postgresql.org/download/)
 
-Once installed:
+After installation:
 - Make sure PostgreSQL is running locally.
 - Note your **username**, **password**, and **port** (default: `5432`).
 
@@ -54,11 +70,22 @@ cd 2025Fall-Team11-Project2
 
 ---
 
-## 📦 Install Dependencies
+## 📦 Install Dependencies (or Run Full Setup)
 
+You can install dependencies manually:
 ```bash
 npm install
 ```
+
+Or, to automate the entire setup (install dependencies, copy env, generate secret, run migrations), use the provided npm script:
+```bash
+npm run setup
+```
+This will:
+- Install dependencies
+- Copy `.env.example` to `.env`
+- Generate an authentication secret
+- Run Prisma migrations
 
 ---
 
@@ -85,10 +112,10 @@ A `.env.local` file will be created in the project directory (2025Fall-Team11-Pr
 
 In your `.env` file, update the connection string:
 ```env
-DATABASE_URL="postgresql://postgres:password@localhost:5432/2025Fall-Team11-Project2"
+DATABASE_URL="postgresql://devuser:devpass@localhost:5432/devdb"
 ```
 
-Replace `password` with your actual PostgreSQL password.
+If you used Docker, use the credentials above. If you installed PostgreSQL locally, use your own username, password, and database name.
 
 ---
 
