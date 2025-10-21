@@ -10,6 +10,7 @@ Before starting, ensure the following are installed on your system:
 - **Node.js** (v20 or higher)
 - **npm** (comes with Node.js)
 - **PostgreSQL** (for database storage)
+- (Optional) **Docker** (for containerized setup)
 
 ---
 
@@ -33,7 +34,8 @@ If both commands return version numbers, Node.js and npm are ready to use.
 
 ## 🐘 Install PostgreSQL
 
-SnapMealAI uses PostgreSQL as its database. You can install it locally or run it in a Docker container for development.
+SnapMealAI uses PostgreSQL as its main database.
+You can either install it locally or run it in Docker depending on your preference.
 
 ### Option 1: Run PostgreSQL with Docker
 
@@ -111,11 +113,17 @@ A `.env.local` file will be created in the project directory (2025Fall-Team11-Pr
 ## 🗄️ Configure Database Connection
 
 In your `.env` file, update the connection string:
+
+If you are using Docker:
 ```env
 DATABASE_URL="postgresql://devuser:devpass@localhost:5432/devdb"
 ```
 
-If you used Docker, use the credentials above. If you installed PostgreSQL locally, use your own username, password, and database name.
+If you are not using Docker:
+```env
+DATABASE_URL="postgresql://postgres:password@localhost:5432/2025Fall-Team11-Project2"
+```
+Replace `password` with your actual PostgreSQL password.
 
 ---
 
