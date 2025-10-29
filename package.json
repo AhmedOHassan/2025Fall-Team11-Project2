@@ -21,8 +21,7 @@
     "typecheck": "tsc --noEmit",
     "test": "vitest",
     "test:ui": "vitest --ui",
-    "coverage": "vitest run --coverage",
-    "setup": "npm install && cp .env.example .env && npx auth secret && npx prisma migrate dev"
+    "coverage": "vitest run --coverage"
   },
   "dependencies": {
     "@auth/prisma-adapter": "^2.7.2",
