@@ -58,7 +58,7 @@ describe("LoginPage", () => {
     expect(passwordInput).toHaveValue("supersecret");
   });
 
-  it("should call signIn and navigate to /main on successful signIn", async () => {
+  it("should call signIn and navigate to /home on successful signIn", async () => {
     signInMock.mockResolvedValue({ ok: true } as any);
 
     render(<LoginPage />);
@@ -76,7 +76,7 @@ describe("LoginPage", () => {
         "credentials",
         expect.objectContaining({ redirect: false, email: "good@gmail.com" }),
       );
-      expect(pushMock).toHaveBeenCalledWith("/main");
+      expect(pushMock).toHaveBeenCalledWith("/home");
     });
   });
 
@@ -124,7 +124,7 @@ describe("LoginPage", () => {
     });
   });
 
-  it("should navigate to /main when signIn returns url or status", async () => {
+  it("should navigate to /home when signIn returns url or status", async () => {
     signInMock.mockResolvedValue({ url: "/some" } as any);
 
     render(<LoginPage />);
@@ -137,7 +137,7 @@ describe("LoginPage", () => {
     fireEvent.click(screen.getByRole("button", { name: /Login/i }));
 
     await waitFor(() => {
-      expect(pushMock).toHaveBeenCalledWith("/main");
+      expect(pushMock).toHaveBeenCalledWith("/home");
     });
   });
 
@@ -219,7 +219,7 @@ describe("LoginPage", () => {
     resolveSignIn!({ ok: true } as any);
 
     await waitFor(() => {
-      expect(pushMock).toHaveBeenCalledWith("/main");
+      expect(pushMock).toHaveBeenCalledWith("/home");
     });
   });
 });

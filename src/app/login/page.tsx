@@ -47,7 +47,7 @@ export default function LoginPage() {
       }
 
       if (anyRes.ok || anyRes.status === 200 || anyRes.url) {
-        router.push("/main");
+        router.push("/home");
         return;
       }
 
