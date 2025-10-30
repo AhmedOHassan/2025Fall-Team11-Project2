@@ -1,19 +1,17 @@
 /**
  * Tests for the meal analysis API endpoint.
  * These tests verify the OpenAI integration functionality.
- * 
- * @author SnapMeal AI Team
+ *
+ * @author Nolan Witt
  */
 import { describe, it, expect, vi, beforeEach } from "vitest";
 import { GET, POST } from "./route";
 import { auth } from "~/server/auth";
 
-// Mock the auth function
 vi.mock("~/server/auth", () => ({
   auth: vi.fn(),
 }));
 
-// Mock OpenAI with a factory function approach
 vi.mock("openai", () => ({
   default: vi.fn().mockImplementation(() => ({
     chat: {
@@ -26,7 +24,6 @@ vi.mock("openai", () => ({
 
 const mockAuth = auth as any;
 
-// Helper to get the mocked OpenAI create function
 const getMockOpenAI = () => {
   const OpenAI = vi.mocked(await import("openai")).default;
   const instance = new OpenAI();
@@ -42,7 +39,7 @@ describe("/api/analyze-meal", () => {
     it("should return health check status", async () => {
       const response = await GET();
       const data = await response.json();
-      
+
       expect(response.status).toBe(200);
       expect(data.status).toBe("ok");
       expect(data.message).toBe("Meal analysis API is running");
@@ -73,7 +70,7 @@ describe("/api/analyze-meal", () => {
       const request = new Request("http://localhost/api/analyze-meal", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({}), // Missing imageBase64
+        body: JSON.stringify({}),
       });
 
       const response = await POST(request);
@@ -86,29 +83,30 @@ describe("/api/analyze-meal", () => {
     it("should analyze a meal successfully", async () => {
       mockAuth.mockResolvedValue({ user: { id: "test-user" } });
 
-      // Mock OpenAI response
       const mockCreate = await getMockOpenAI();
       mockCreate.mockResolvedValue({
-        choices: [{
-          message: {
-            content: JSON.stringify({
-              ingredients: ["chicken", "broccoli"],
-              nutrition: {
-                calories: 350,
-                protein: "30g",
-                carbs: "15g",
-                fat: "18g",
-                fiber: "5g"
-              },
-              allergens: [],
-              dietary_tags: ["gluten-free"],
-              healthScore: 8,
-              alternatives: ["Add brown rice for more fiber"],
-              portion_analysis: "Standard serving",
-              confidence: 0.9
-            })
-          }
-        }]
+        choices: [
+          {
+            message: {
+              content: JSON.stringify({
+                ingredients: ["chicken", "broccoli"],
+                nutrition: {
+                  calories: 350,
+                  protein: "30g",
+                  carbs: "15g",
+                  fat: "18g",
+                  fiber: "5g",
+                },
+                allergens: [],
+                dietary_tags: ["gluten-free"],
+                healthScore: 8,
+                alternatives: ["Add brown rice for more fiber"],
+                portion_analysis: "Standard serving",
+                confidence: 0.9,
+              }),
+            },
+          },
+        ],
       });
 
       const request = new Request("http://localhost/api/analyze-meal", {
@@ -116,7 +114,7 @@ describe("/api/analyze-meal", () => {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           imageBase64: "test-image-data",
-          userPreferences: { dietary: ["gluten-free"] }
+          userPreferences: { dietary: ["gluten-free"] },
         }),
       });
 
@@ -132,14 +130,15 @@ describe("/api/analyze-meal", () => {
     it("should handle OpenAI parsing errors", async () => {
       mockAuth.mockResolvedValue({ user: { id: "test-user" } });
 
-      // Mock OpenAI to return invalid JSON
       const mockCreate = await getMockOpenAI();
       mockCreate.mockResolvedValue({
-        choices: [{
-          message: {
-            content: "This is not valid JSON"
-          }
-        }]
+        choices: [
+          {
+            message: {
+              content: "This is not valid JSON",
+            },
+          },
+        ],
       });
 
       const request = new Request("http://localhost/api/analyze-meal", {
@@ -147,7 +146,7 @@ describe("/api/analyze-meal", () => {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           imageBase64: "test-image-data",
-          userPreferences: {}
+          userPreferences: {},
         }),
       });
 

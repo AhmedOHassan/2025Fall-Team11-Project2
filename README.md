@@ -57,15 +57,15 @@ Ordering food online is convenient, but users often don’t know what’s in the
 
 ### **October – Release 1: Prototype**
 - Implement authentication flow with Signup, Login, and Home page.
-- Build frontend with photo upload and capture interface.
-- Connect GPT API to analyze menu text.
-- Display nutrition summary + simple delivery recommendation.
+- Build a frontend UI to upload a single food-item photo (either a photo of a menu item or an image downloaded online) and submit it for analysis.
+- Integrate the GPT API to analyze the uploaded single-item image and return structured results: ingredients and details, nutrition summary, allergen warnings, healthier alternatives/suggestions, and a simple delivery recommendation.
+- Build a frontend UI to display the analysis results (nutrition summary, ingredients & details, allergen warnings, healthier alternatives, and delivery recommendation).
 
 ### **November – Release 2: Enhanced System**
-- Add allergen warnings and dietary filters.
-- Suggest healthier alternatives automatically.
-- Save user preferences and meal history.
-- Build admin dashboard for restaurant verification.
+- Add camera capture UI to allow users to take a real-time photo of a single menu item or food (mobile + desktop camera support) and submit it directly for analysis.
+- Save image analysis results and build a history page where users can view, search, and re-open previously analyzed images.
+- Allow users to specify allergy preferences in their profile and include them with analysis requests so the API can surface personalized allergen warnings.
+- Build admin dashboard for managing user accounts.
 
 ---
 

@@ -1,20 +1,20 @@
 /**
  * API route for analyzing meal images using OpenAI vision model.
  * This endpoint accepts image data and user preferences to provide
- * nutritional insights, allergen warnings, and healthier alternatives.
- * 
- * @author SnapMeal AI Team
+ * nutritional insights, allergen warnings, healthier alternatives, and delivery recommendations.
+ * Also, this file handles all API endpoints for /api/analyze-meal (GET, POST, PUT, DELETE, etc.)
+ *
+ * @author Nolan Witt
+ * @author Ahmed Hassan
  */
 import { NextRequest, NextResponse } from "next/server";
 import { auth } from "~/server/auth";
 import OpenAI from "openai";
 
-// Initialize OpenAI client
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
 });
 
-// Response schema for type safety
 interface MealAnalysisResult {
   ingredients: string[];
   nutrition: {
@@ -31,9 +31,14 @@ interface MealAnalysisResult {
   portion_analysis: string;
   confidence: number;
   warnings?: string[];
+  delivery_recommendation?: string;
+  delivery_options?: {
+    platform: string;
+    eta_minutes?: number;
+    cost_estimate?: string;
+  }[];
 }
 
-// Health check endpoint
 export async function GET() {
   return NextResponse.json({
     status: "ok",
@@ -44,12 +49,11 @@ export async function GET() {
 
 export async function POST(req: NextRequest) {
   try {
-    // Check authentication
     const session = await auth();
     if (!session?.user) {
       return NextResponse.json(
         { error: "Authentication required" },
-        { status: 401 }
+        { status: 401 },
       );
     }
 
@@ -59,11 +63,10 @@ export async function POST(req: NextRequest) {
     if (!imageBase64) {
       return NextResponse.json(
         { error: "Image data is required" },
-        { status: 400 }
+        { status: 400 },
       );
     }
 
-    // Construct the analysis prompt
     const analysisPrompt = `Analyze this food image and provide a comprehensive nutritional analysis. Return the response as a valid JSON object with the following structure:
 
 {
@@ -81,35 +84,39 @@ export async function POST(req: NextRequest) {
   "alternatives": ["suggestion1", "suggestion2"],
   "portion_analysis": "description of portion size",
   "confidence": number (0.0-1.0),
-  "warnings": ["warning1", "warning2"]
+  "warnings": ["warning1", "warning2"],
+  "delivery_recommendation": "One-paragraph recommendation for delivery (e.g., best packaging, tip for reheating, whether pickup is preferable, healthy ordering choice)",
+  "delivery_options": [
+    { "platform": "UberEats", "eta_minutes": 25, "cost_estimate": "$8-12" },
+    { "platform": "Doordash", "eta_minutes": 20, "cost_estimate": "$7-11" }
+  ]
 }
 
 User preferences: ${JSON.stringify(userPreferences || {})}
 
-Please provide accurate nutritional estimates and helpful health insights. If you cannot clearly identify the food, indicate this in the confidence score and warnings.`;
+Please provide accurate nutritional estimates, helpful health insights, and a short, actionable delivery recommendation and 1-3 suggested delivery platforms with ETA/cost estimates where possible. If uncertain, return sensible defaults and set confidence accordingly.`;
 
-    // Call OpenAI API with vision model
     const response = await openai.chat.completions.create({
-      model: "gpt-4o", // Using the latest vision model
+      model: "gpt-4o",
       messages: [
         {
           role: "user",
           content: [
             {
               type: "text",
-              text: analysisPrompt
+              text: analysisPrompt,
             },
             {
               type: "image_url",
               image_url: {
-                url: `data:image/jpeg;base64,${imageBase64}`
-              }
-            }
-          ]
-        }
+                url: `data:image/jpeg;base64,${imageBase64}`,
+              },
+            },
+          ],
+        },
       ],
       max_tokens: 1500,
-      temperature: 0.3 // Lower temperature for more consistent results
+      temperature: 0.3,
     });
 
     const content = response.choices[0]?.message?.content;
@@ -117,10 +124,10 @@ Please provide accurate nutritional estimates and helpful health insights. If yo
       throw new Error("No response from OpenAI");
     }
 
-    // Parse the JSON response
+    console.log("OpenAI response content:", content);
+
     let analysis: MealAnalysisResult;
     try {
-      // Clean the response in case there's extra text around the JSON
       const jsonMatch = content.match(/\{[\s\S]*\}/);
       const jsonString = jsonMatch ? jsonMatch[0] : content;
       analysis = JSON.parse(jsonString);
@@ -129,44 +136,46 @@ Please provide accurate nutritional estimates and helpful health insights. If yo
       throw new Error("Invalid response format from AI");
     }
 
-    // Validate the response structure
+    analysis.delivery_recommendation = analysis.delivery_recommendation || "";
+    analysis.delivery_options = analysis.delivery_options || [];
+
     if (!analysis.ingredients || !analysis.nutrition || !analysis.healthScore) {
       throw new Error("Incomplete analysis from AI");
     }
 
-    // Add user-specific warnings based on preferences
     if (userPreferences?.allergies?.length) {
-      const detectedAllergens = analysis.allergens.filter(allergen =>
+      const detectedAllergens = analysis.allergens.filter((allergen) =>
         userPreferences.allergies.some((userAllergen: string) =>
-          allergen.toLowerCase().includes(userAllergen.toLowerCase())
-        )
+          allergen.toLowerCase().includes(userAllergen.toLowerCase()),
+        ),
       );
-      
+
       if (detectedAllergens.length > 0) {
         analysis.warnings = analysis.warnings || [];
-        analysis.warnings.push(`⚠️ ALLERGEN ALERT: This meal may contain ${detectedAllergens.join(', ')} which you've marked as allergies.`);
+        analysis.warnings.push(
+          `⚠️ ALLERGEN ALERT: This meal may contain ${detectedAllergens.join(", ")} which you've marked as allergies.`,
+        );
       }
     }
 
     return NextResponse.json({
       success: true,
       analysis,
-      timestamp: new Date().toISOString()
+      timestamp: new Date().toISOString(),
     });
-
   } catch (error: any) {
     console.error("Meal analysis error:", error);
-    
-    if (error.code === 'insufficient_quota') {
+
+    if (error.code === "insufficient_quota") {
       return NextResponse.json(
         { error: "OpenAI API quota exceeded. Please check your billing." },
-        { status: 429 }
+        { status: 429 },
       );
     }
-    
+
     return NextResponse.json(
       { error: error.message || "Analysis failed" },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }
