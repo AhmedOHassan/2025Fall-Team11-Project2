@@ -10,11 +10,14 @@
 import React, { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { useSession, signOut } from "next-auth/react";
+import { usePathname } from "next/navigation";
 
 export default function Header() {
   const { data: session, status } = useSession();
   const [isOpen, setIsOpen] = useState(false);
   const wrapperRef = useRef<HTMLDivElement | null>(null);
+  const pathname = usePathname();
+  const isHome = pathname === "/home";
 
   useEffect(() => {
     function handlePointerDown(e: PointerEvent) {
@@ -56,8 +59,15 @@ export default function Header() {
 
         {/* show navigation only when user is logged in; visible on md+ */}
         {session?.user && (
-          <nav className="mx-auto hidden items-center gap-6 text-sm text-gray-700 md:flex dark:text-gray-200">
-            <a className="hover:text-primary" href="/main">
+          <nav className="mx-auto hidden items-center gap-6 text-sm md:flex">
+            <a
+              href="/home"
+              className={`hover:text-primary transition-colors ${
+                isHome
+                  ? "font-semibold text-green-600"
+                  : "text-gray-700 dark:text-gray-200"
+              }`}
+            >
               Home
             </a>
           </nav>
@@ -101,9 +111,13 @@ export default function Header() {
                 {/* small-screen nav: visible only on small screens (md:hidden) */}
                 <div className="py-2 md:hidden">
                   <a
-                    href="/main"
+                    href="/home"
                     onClick={() => setIsOpen(false)}
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-[#101010]"
+                    className={`block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-[#101010] ${
+                      isHome
+                        ? "font-semibold text-green-600"
+                        : "text-gray-700 dark:text-gray-200"
+                    }`}
                   >
                     Home
                   </a>
@@ -113,7 +127,7 @@ export default function Header() {
                 <ul className="py-1">
                   <li>
                     <Link
-                      href="/main"
+                      href="/home"
                       className="block cursor-pointer px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-[#101010]"
                       onClick={() => setIsOpen(false)}
                     >

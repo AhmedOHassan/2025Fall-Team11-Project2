@@ -62,7 +62,7 @@ Ordering food online is convenient, but users often don’t know what’s in the
 - Build a frontend UI to display the analysis results (nutrition summary, ingredients & details, allergen warnings, healthier alternatives, and delivery recommendation).
 
 ### **November – Release 2: Enhanced System**
-- Add camera capture UI to allow users to take a real-time photo of a single menu item or food (mobile + desktop camera support) and submit it directly for analysis.
+- Add camera capture UI to allow users to take a real-time photo of a single menu item or food and submit it directly for analysis.
 - Save image analysis results and build a history page where users can view, search, and re-open previously analyzed images.
 - Allow users to specify allergy preferences in their profile and include them with analysis requests so the API can surface personalized allergen warnings.
 - Build admin dashboard for managing user accounts.
