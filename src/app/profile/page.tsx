@@ -1,3 +1,9 @@
+/**
+ * Profile page for the signed-in user.
+ * Displays account details and provides a password-reset form.
+ *
+ * @author Ahmed Hassan
+ */
 "use client";
 
 import React, { useState } from "react";

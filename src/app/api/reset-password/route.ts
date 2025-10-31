@@ -1,3 +1,11 @@
+/**
+ * API route to reset an authenticated user's password.
+ * Verifies the current password, validates the new password length,
+ * hashes the new password and updates the user record in the database.
+ * Also, this file handles all API endpoints for /api/reset-password (GET, POST, PUT, DELETE, etc.)
+ *
+ * @author Ahmed Hassan
+ */
 import { NextRequest, NextResponse } from "next/server";
 import { auth } from "~/server/auth";
 import { db } from "~/server/db";
