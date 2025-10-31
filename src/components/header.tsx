@@ -127,7 +127,7 @@ export default function Header() {
                 <ul className="py-1">
                   <li>
                     <Link
-                      href="/home"
+                      href="/profile"
                       className="block cursor-pointer px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-[#101010]"
                       onClick={() => setIsOpen(false)}
                     >
