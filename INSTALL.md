@@ -70,6 +70,19 @@ cp .env.example .env
 
 ---
 
+## 🤖 Add OpenAI API Key
+
+SnapMealAI uses the OpenAI/GPT API. Create an API key at:
+https://platform.openai.com/account/api-keys
+
+Then in your `.env` file, update the OpenAI API key:
+
+```env
+OPENAI_API_KEY=""
+```
+
+---
+
 ## 🔑 Generate Authentication Secret
 
 Run:

@@ -116,9 +116,10 @@ export default function HomePage() {
             </div>
             <h3 className="mt-2 text-lg font-semibold">Discover &amp; Order</h3>
             <p className="text-muted-foreground text-md max-w-xs text-center">
-              Receive recommendations for healthier alternatives from local
-              restaurants and order directly through our integrated delivery
-              partners.
+              Discover healthier menu options and get practical delivery
+              guidance, suggested platforms, estimated ETA/cost, packaging and
+              reheating tips, so you can choose pickup or delivery with
+              confidence.
             </p>
           </div>
         </div>

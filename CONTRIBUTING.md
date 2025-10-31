@@ -24,28 +24,21 @@ If you’re unsure how to create one, check out the resources at the bottom of t
 
 ## 🔧 Submitting a Pull Request
 
-1. [Fork][fork] and clone the repository.  
-2. Install dependencies:  
-   ```bash
-   npm install
-   ```
-3. Make sure everything works locally:  
-   ```bash
-   npm run dev
-   ```
+1. Fork and clone the repository.  
+2. Follow the full installation guide here: [INSTALL.md](INSTALL.md)
 4. Create a new branch for your feature or fix:  
    ```bash
    git checkout -b my-feature-branch
    ```
 5. Make your changes and commit them with clear, descriptive messages.  
-6. Push to your fork and [submit a pull request][pr].  
+6. Push to your fork and submit a pull request.  
 7. 🎉 Wait for your PR to be reviewed and merged!
 
 ---
 
 ## ✅ Tips for a Great Contribution
 
-- Follow the [JavaScript Standard Style][style] - linting issues will appear when you run `npm test`.  
+- Follow the existing ESLint and Prettier configurations, run `npm run lint` before committing to ensure consistent code style.
 - Keep PRs small and focused. If you have unrelated changes, submit them separately.  
 - Write or update tests when possible.  
 - Use meaningful commit messages. Example:  
