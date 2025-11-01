@@ -1,11 +1,18 @@
 <!-- ![Build](https://img.shields.io/github/actions/workflow/status/AhmedOHassan/2025Fall-Team11-Project2/ci.yml?branch=main) -->
 <!-- Project Info -->
 
+[![CI](https://img.shields.io/github/actions/workflow/status/AhmedOHassan/2025Fall-Team11-Project2/coverage.yml?branch=main&label=CI%20Tests%20%26%20Coverage)](../../actions/workflows/coverage.yml)
 [![coverage](https://codecov.io/gh/AhmedOHassan/2025Fall-Team11-Project2/branch/main/graph/badge.svg)](https://codecov.io/gh/AhmedOHassan/2025Fall-Team11-Project2)
 [![License](https://img.shields.io/github/license/AhmedOHassan/2025Fall-Team11-Project2)](LICENSE)
 [![Contributions Welcome](https://img.shields.io/badge/Contributions-Welcome-brightgreen.svg)](CONTRIBUTING.md)
 [![Code of Conduct](https://img.shields.io/badge/Code%20of%20Conduct-Active-blue.svg)](CODE_OF_CONDUCT.md)
 [![Install Guide](https://img.shields.io/badge/Install-Guide-important.svg)](INSTALL.md)
+
+<!-- Tooling: Style Checkers, Formatters, Syntax Checkers -->
+
+[![ESLint](https://img.shields.io/badge/ESLint-4B32C3?logo=eslint&logoColor=white)](eslint.config.js)
+[![Prettier](https://img.shields.io/badge/Prettier-F7B93E?logo=prettier&logoColor=000)](prettier.config.js)
+[![TypeScript Check](<https://img.shields.io/badge/Syntax-TS%20(tsc)-3178C6?logo=typescript&logoColor=white>)](tsconfig.json)
 
 <!-- Tech Stack -->
 
