@@ -112,6 +112,19 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for full guidelines.
 
 ---
 
+## ❓ Getting Help
+
+Yes. For help using SnapMealAI, contact the team:
+
+- Ahmed Hassan — aohassan@ncsu.edu  
+- Nolan Witt — nbwitt@ncsu.edu  
+- JC Migaly — jmigaly@ncsu.edu  
+- Shounak Deshmukh — sdeshmu4@ncsu.edu
+
+You can also open an issue or start a discussion in this repository for public support.
+
+--- 
+
 ## 📄 License
 
 This project is licensed under the **GNU V3 License**, see the [LICENSE](LICENSE) file for details.
@@ -119,5 +132,7 @@ This project is licensed under the **GNU V3 License**, see the [LICENSE](LICENSE
 ---
 
 ## 🌍 Authors & Team
+
 **Team 11 (Ahmed Hassan, Nolan Witt, JC Migaly, Shounak Deshmukh)**
+
 ---
