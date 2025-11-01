@@ -16,13 +16,13 @@
 
 <!-- Community -->
 [![Discussions](https://img.shields.io/badge/Chat-Discussions-orange.svg)](../../discussions)
-![Issues](https://img.shields.io/github/issues/AhmedOHassan/2025Fall-Team11-Project2)
-![Pull Requests](https://img.shields.io/github/issues-pr/AhmedOHassan/2025Fall-Team11-Project2)
+[![Issues](https://img.shields.io/github/issues/AhmedOHassan/2025Fall-Team11-Project2)](https://github.com/AhmedOHassan/2025Fall-Team11-Project2/issues)
+[![Pull Requests](https://img.shields.io/github/issues-pr/AhmedOHassan/2025Fall-Team11-Project2)](https://github.com/AhmedOHassan/2025Fall-Team11-Project2/pulls)
 
 <!-- Project Stats -->
-![Forks](https://img.shields.io/github/forks/AhmedOHassan/2025Fall-Team11-Project2)
-![Stars](https://img.shields.io/github/stars/AhmedOHassan/2025Fall-Team11-Project2)
-![Contributors](https://img.shields.io/github/contributors/AhmedOHassan/2025Fall-Team11-Project2)
+[![Forks](https://img.shields.io/github/forks/AhmedOHassan/2025Fall-Team11-Project2)](https://github.com/AhmedOHassan/2025Fall-Team11-Project2/network/members)
+[![Stars](https://img.shields.io/github/stars/AhmedOHassan/2025Fall-Team11-Project2)](https://github.com/AhmedOHassan/2025Fall-Team11-Project2/stargazers)
+[![Contributors](https://img.shields.io/github/contributors/AhmedOHassan/2025Fall-Team11-Project2)](https://github.com/AhmedOHassan/2025Fall-Team11-Project2/graphs/contributors)
 
 # SnapMealAI 🍽️
 
