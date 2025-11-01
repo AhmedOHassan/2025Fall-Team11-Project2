@@ -20,7 +20,6 @@
 ![Prisma](https://img.shields.io/badge/Prisma-2D3748?logo=prisma&logoColor=white)
 ![TailwindCSS](https://img.shields.io/badge/TailwindCSS-38B2AC?logo=tailwindcss&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?logo=typescript&logoColor=white)
-![Vercel](https://img.shields.io/badge/Vercel-000000?logo=vercel&logoColor=white)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?logo=postgresql&logoColor=white)
 
 <!-- Community -->
@@ -107,7 +106,6 @@ SnapMealAI is designed for:
 | **Validation** | Zod                                           |
 | **AI**         | GPT API (OpenAI)                              |
 | **CI/CD**      | GitHub Actions                                |
-| **Hosting**    | Vercel                                        |
 
 ---
 
