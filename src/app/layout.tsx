@@ -10,6 +10,7 @@ import { type Metadata } from "next";
 import { Geist } from "next/font/google";
 import Header from "~/components/header";
 import AuthProvider from "~/components/authProvider";
+import SkipLink from "~/components/SkipLink";
 
 export const metadata: Metadata = {
   title: "SnapMeal AI",
@@ -29,8 +30,9 @@ export default async function RootLayout({
     <html lang="en" className={`${geist.variable}`}>
       <body {...({ "cz-shortcut-listen": "true" } as any)}>
         <AuthProvider>
+          <SkipLink />
           <Header />
-          <main>{children}</main>
+          <main id="main">{children}</main>
         </AuthProvider>
 
         <footer className="border-primary/20 dark:border-primary/30 mt-12 border-t">

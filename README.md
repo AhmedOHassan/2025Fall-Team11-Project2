@@ -26,14 +26,13 @@
 <!-- Community -->
 
 [![Discussions](https://img.shields.io/badge/Chat-Discussions-orange.svg)](../../discussions)
-![Issues](https://img.shields.io/github/issues/AhmedOHassan/2025Fall-Team11-Project2)
-![Pull Requests](https://img.shields.io/github/issues-pr/AhmedOHassan/2025Fall-Team11-Project2)
+[![Issues](https://img.shields.io/github/issues/AhmedOHassan/2025Fall-Team11-Project2)](https://github.com/AhmedOHassan/2025Fall-Team11-Project2/issues)
+[![Pull Requests](https://img.shields.io/github/issues-pr/AhmedOHassan/2025Fall-Team11-Project2)](https://github.com/AhmedOHassan/2025Fall-Team11-Project2/pulls)
 
 <!-- Project Stats -->
-
-![Forks](https://img.shields.io/github/forks/AhmedOHassan/2025Fall-Team11-Project2)
-![Stars](https://img.shields.io/github/stars/AhmedOHassan/2025Fall-Team11-Project2)
-![Contributors](https://img.shields.io/github/contributors/AhmedOHassan/2025Fall-Team11-Project2)
+[![Forks](https://img.shields.io/github/forks/AhmedOHassan/2025Fall-Team11-Project2)](https://github.com/AhmedOHassan/2025Fall-Team11-Project2/network/members)
+[![Stars](https://img.shields.io/github/stars/AhmedOHassan/2025Fall-Team11-Project2)](https://github.com/AhmedOHassan/2025Fall-Team11-Project2/stargazers)
+[![Contributors](https://img.shields.io/github/contributors/AhmedOHassan/2025Fall-Team11-Project2)](https://github.com/AhmedOHassan/2025Fall-Team11-Project2/graphs/contributors)
 
 # SnapMealAI 🍽️
 
@@ -43,8 +42,8 @@ SnapMealAI helps users make informed, healthy meal decisions by analyzing food i
 It provides instant ingredient recognition, calorie estimation, allergen alerts, and dietary suggestions, all in one snap!
 
 ---
-
 ## 🚀 Our Mission
+Ordering food online is convenient, but users often don’t know what’s in their meal, especially for visually complex or homemade dishes. Restaurants also struggle to communicate nutritional details quickly. **SnapMealAI** bridges this gap with AI-powered food understanding.
 
 Ordering food online is convenient, but users often don’t know what’s in their meal, especially for visually complex or homemade dishes. Restaurants also struggle to communicate nutritional details quickly.
 
@@ -63,6 +62,13 @@ Ordering food online is convenient, but users often don’t know what’s in the
 - **Restaurants:** Provide nutrition transparency and build trust.
 - **Delivery Platforms/Admins:** Differentiate with AI value-added insights.
 - **Healthcare Partners:** Integrate AI-driven nutrition analysis with wellness platforms.
+
+ ## 🎯 Target Users
+SnapMealAI is designed for:
+- **Consumers** who want instant nutritional and allergen insights for meals and menus.
+- **Restaurants** seeking to provide transparent nutrition information to customers.
+- **Food delivery services** integrating AI-based meal analysis for added user value.
+- **Healthcare & wellness partners** who want to monitor or recommend dietary habits through AI.
 
 ---
 
@@ -100,9 +106,60 @@ Ordering food online is convenient, but users often don’t know what’s in the
 
 ---
 
+## 🧾 Third‑party dependencies
+
+The README highlights key technologies (see "Tech Stack" above), but the authoritative, always‑up‑to‑date list of all runtime and development dependencies lives in the project's manifest:
+
+- Full dependency list: [package.json](package.json)
+
+For convenience, primary runtime dependencies include:
+| Package | Version (package.json) | NPM / Homepage | Type |
+|---|---:|---|---:|
+| next |  ^15.2.3 | https://www.npmjs.com/package/next | Mandatory |
+| react | ^19.0.0 | https://www.npmjs.com/package/react | Mandatory |
+| react-dom | ^19.0.0 | https://www.npmjs.com/package/react-dom | Mandatory |
+| next-auth | 5.0.0-beta.25 | https://www.npmjs.com/package/next-auth | Mandatory |
+| @prisma/client | ^6.5.0 | https://www.npmjs.com/package/@prisma/client | Mandatory |
+| prisma (dev) | ^6.5.0 | https://www.npmjs.com/package/prisma | Optional |
+| openai | ^6.7.0 | https://www.npmjs.com/package/openai | Mandatory |
+| tailwindcss (dev) | ^4.0.15 | https://www.npmjs.com/package/tailwindcss | Optional |
+| zod | ^3.24.2 | https://www.npmjs.com/package/zod | Mandatory |
+| bcrypt | ^6.0.0 | https://www.npmjs.com/package/bcrypt | Mandatory |
+| lucide-react | ^0.545.0 | https://www.npmjs.com/package/lucide-react | Mandatory |
+| @radix-ui/* | (various) | https://www.npmjs.com/search?q=%40radix-ui | Mandatory |
+
+---
+
+## 🧪 Example Use Cases
+Here are some example scenarios demonstrating how SnapMealAI can be used:
+
+- **Personal Health Tracking:** A user uploads a home-cooked meal photo to estimate calories and identify allergens.
+- **Restaurant Menu Analysis:** A restaurant uses SnapMealAI to auto-generate nutrition labels for menu items.
+- **Delivery Platform Integration:** An online food delivery app integrates SnapMealAI to help users choose healthier meals.
+
+(Additional real-world case studies will be added after pilot testing.)
+
+---
+
 ## 🛠️ Setup & Installation
 
 To run SnapMealAI locally, follow the full installation guide here: [INSTALL.md](INSTALL.md)
+
+---
+
+## 📘 User Guide
+
+Step-by-step usage instructions, screenshots, and walkthroughs are available in the project user guide:
+
+- Read the user guide: [USER_GUIDE.md](USER_GUIDE.md)
+
+---
+
+## 🎥 Video Tutorial
+
+Watch a short walkthrough of the app on YouTube:
+
+[![SnapMeal AI — Video Tutorial](https://img.youtube.com/vi/hjrJ-_UO-R4/0.jpg)](https://youtu.be/hjrJ-_UO-R4?si=5LIV0paGKiT0Nywe)
 
 ---
 
@@ -112,6 +169,60 @@ We welcome community contributions!
 See [CONTRIBUTING.md](CONTRIBUTING.md) for full guidelines.
 
 ---
+
+## ❓ Getting Help & Support
+
+We provide community and developer support via these channels:
+
+- Official support email (preferred — sole user-facing support address):
+  - snapmealai@gmail.com
+
+- Individual emails (for direct contact / escalations):
+  - Ahmed Hassan — aohassan@ncsu.edu  
+  - Nolan Witt — nbwitt@ncsu.edu  
+  - JC Migaly — jmigaly@ncsu.edu  
+  - Shounak Deshmukh — sdeshmu4@ncsu.edu
+
+- Repository support:
+  - Open an [issue](https://github.com/AhmedOHassan/2025Fall-Team11-Project2/issues) for bugs or feature requests.
+  - Start a [discussion](https://github.com/AhmedOHassan/2025Fall-Team11-Project2/discussions) for general questions.
+  - See CONTRIBUTING.md for developer guidelines and how to submit PRs.
+  - Follow CODE_OF_CONDUCT.md for community interaction rules.
+
+Support scope and response expectations:
+- We handle user help, bug triage, and guidance for contributors.
+- Typical response time: aim to reply to issues/emails within 3 business days. Complex developer questions or feature requests may take longer.
+- This repository provides community support only (no guaranteed SLA or commercial support).
+
+For developer onboarding, follow CONTRIBUTING.md and include repro steps, logs, and environment info when reporting issues.
+
+--- 
+
+## ♿ Accessibility
+
+We aim for WCAG 2.1 AA and strive to make SnapMeal AI usable by everyone. Key accessibility features include:
+
+- Semantic HTML and landmark regions for screen-reader friendliness  
+- Keyboard navigation and focus-visible styles for interactive controls  
+- High-contrast color support and accessible color tokens  
+- Reduced motion options respected where supported  
+- ARIA attributes used only when necessary, with clear labels and roles
+
+If you find an accessibility issue, please report it via a GitHub Issue and include:
+- Steps to reproduce
+- Browser and OS
+- A screenshot or short screencast (if possible)
+- Expected vs actual behavior
+
+### 📘 Documentation Accessibility
+
+Docs follow accessible authoring practices:
+- Clear heading hierarchy (H1 → H2 → H3)
+- Descriptive link text and meaningful alt text for images
+- Code examples are copy-paste friendly
+- Tables include headers and captions when helpful
+
+--- 
 
 ## 📄 License
 
