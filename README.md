@@ -122,7 +122,15 @@ Step-by-step usage instructions, screenshots, and walkthroughs are available in 
 
 - Read the user guide: [USER_GUIDE.md](USER_GUIDE.md)
 
---- 
+---
+
+## 🎥 Video Tutorial
+
+Watch a short walkthrough of the app on YouTube:
+
+[![SnapMeal AI — Video Tutorial](https://img.youtube.com/vi/hjrJ-_UO-R4/0.jpg)](https://youtu.be/hjrJ-_UO-R4?si=5LIV0paGKiT0Nywe)
+
+---
 
 ## 👥 Contributing
 
