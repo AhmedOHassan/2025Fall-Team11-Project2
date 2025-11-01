@@ -194,4 +194,39 @@ describe("/api/reset-password", () => {
     const body = await (res as Response).json();
     expect(body.error).toMatch(/boom/i);
   });
+
+  it("should return 400 when request JSON is invalid (missing fields)", async () => {
+    mockAuth.mockResolvedValue({ user: { id: "u6" } });
+
+    const badReq = {
+      json: vi.fn().mockRejectedValue(new Error("invalid json")),
+    } as any;
+
+    const res = await POST(badReq);
+    expect(res.status).toBe(400);
+    const body = await (res as Response).json();
+    expect(body).toEqual({ error: "Missing fields" });
+  });
+
+  it("should return 500 with 'Server error' when thrown error has no message", async () => {
+    mockAuth.mockResolvedValue({ user: { id: "u7" } });
+    mockDb.user.findUnique.mockResolvedValue({ id: "u7", password: "oldhash" });
+    mockCompare.mockResolvedValue(true);
+    mockHash.mockResolvedValue("new-hash");
+    mockDb.user.update.mockRejectedValue({});
+
+    const req = new Request("http://localhost/api/reset-password", {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({
+        currentPassword: "old",
+        newPassword: "newpassword",
+      }),
+    });
+
+    const res = await POST(req as any);
+    expect(res.status).toBe(500);
+    const body = await (res as Response).json();
+    expect(body).toEqual({ error: "Server error" });
+  });
 });

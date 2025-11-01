@@ -1,8 +1,14 @@
 name: CI - Tests & Coverage
-on: [push, pull_request]
+on:
+  push:
+  pull_request:
+  schedule:
+    - cron: "0 6 * * *"
 
 jobs:
   test:
+    # Nightly runs only on main; push/PR runs on any branch
+    if: github.event_name != 'schedule' || github.ref == 'refs/heads/main'
     name: Run tests & upload coverage
     runs-on: ubuntu-latest
     steps:
@@ -17,6 +23,14 @@ jobs:
 
       - name: Install dependencies
         run: npm ci
+
+      - name: Lint (non-blocking)
+        run: npm run lint
+        continue-on-error: true
+
+      - name: Typecheck (non-blocking)
+        run: npm run typecheck
+        continue-on-error: true
 
       - name: Run tests and generate coverage
         run: npm run coverage

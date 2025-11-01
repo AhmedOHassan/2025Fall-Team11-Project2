@@ -1,4 +1,20 @@
 /**
+ * SnapMeal AI - Main dashboard page for meal analysis
+ * Copyright (C) 2025 Team11-Project2
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <https://www.gnu.org/licenses/>.
+ *
  * Main SnapMeal AI dashboard page.
  * This page provides the core functionality for uploading meal images,
  * analyzing them with AI, and displaying nutritional insights and recommendations.
@@ -255,7 +271,11 @@ export default function MainPage() {
 
       {/* Error Display */}
       {error && (
-        <Alert className="mb-6 border-red-200 bg-red-50 dark:bg-red-900/20">
+        <Alert
+          role="alert"
+          aria-live="assertive"
+          className="mb-6 border-red-200 bg-red-50 dark:bg-red-900/20"
+        >
           <AlertTriangle className="h-4 w-4 text-red-600" />
           <p className="text-red-800 dark:text-red-200">{error}</p>
         </Alert>
@@ -266,7 +286,11 @@ export default function MainPage() {
         <>
           {/* Warnings */}
           {analysis.warnings && analysis.warnings.length > 0 && (
-            <Alert className="mb-6 border-orange-200 bg-orange-50 dark:bg-orange-900/20">
+            <Alert
+              role="status"
+              aria-live="polite"
+              className="mb-6 border-orange-200 bg-orange-50 dark:bg-orange-900/20"
+            >
               <AlertTriangle className="h-4 w-4 text-orange-600" />
               <div>
                 {analysis.warnings.map((warning, index) => (

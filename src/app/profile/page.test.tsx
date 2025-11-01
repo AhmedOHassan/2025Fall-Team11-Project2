@@ -186,4 +186,140 @@ describe("ProfilePage", () => {
       expect(submit).not.toBeDisabled();
     });
   });
+
+  it("should show error when submitting empty fields", async () => {
+    const { container } = render(<ProfilePage />);
+    const form = container.querySelector("form") as HTMLFormElement | null;
+    expect(form).toBeTruthy();
+
+    fireEvent.submit(form!);
+
+    await waitFor(() =>
+      expect(
+        screen.getByText(/All fields are required\./i),
+      ).toBeInTheDocument(),
+    );
+  });
+
+  it("should show generic 'Failed to reset password.' when API returns non-ok without error", async () => {
+    vi.stubGlobal(
+      "fetch",
+      vi.fn().mockResolvedValue({
+        ok: false,
+        json: vi.fn().mockResolvedValue({}),
+      } as any),
+    );
+
+    render(<ProfilePage />);
+    fireEvent.change(screen.getByLabelText(/Current password/i), {
+      target: { value: "current" },
+    });
+    fireEvent.change(screen.getByLabelText(/^New password$/i), {
+      target: { value: "newpassword" },
+    });
+    fireEvent.change(screen.getByLabelText(/Confirm new password/i), {
+      target: { value: "newpassword" },
+    });
+
+    const submit = screen.getByRole("button", { name: /Update password/i });
+    fireEvent.click(submit);
+
+    await waitFor(() => {
+      expect(
+        screen.getByText(/Failed to reset password\./i),
+      ).toBeInTheDocument();
+      expect(submit).not.toBeDisabled();
+    });
+  });
+
+  it("should show generic 'Failed to reset password.' when res.json throws and response is non-ok", async () => {
+    vi.stubGlobal(
+      "fetch",
+      vi.fn().mockResolvedValue({
+        ok: false,
+        json: vi.fn().mockRejectedValue(new Error("broken-json")),
+      } as any),
+    );
+
+    render(<ProfilePage />);
+    fireEvent.change(screen.getByLabelText(/Current password/i), {
+      target: { value: "current" },
+    });
+    fireEvent.change(screen.getByLabelText(/^New password$/i), {
+      target: { value: "newpassword" },
+    });
+    fireEvent.change(screen.getByLabelText(/Confirm new password/i), {
+      target: { value: "newpassword" },
+    });
+
+    const submit = screen.getByRole("button", { name: /Update password/i });
+    fireEvent.click(submit);
+
+    await waitFor(() => {
+      expect(
+        screen.getByText(/Failed to reset password\./i),
+      ).toBeInTheDocument();
+      expect(submit).not.toBeDisabled();
+    });
+  });
+
+  it("should reset busy flag after successful reset (button re-enabled)", async () => {
+    vi.stubGlobal(
+      "fetch",
+      vi.fn().mockResolvedValue({
+        ok: true,
+        json: vi.fn().mockResolvedValue({}),
+      } as any),
+    );
+
+    render(<ProfilePage />);
+    fireEvent.change(screen.getByLabelText(/Current password/i), {
+      target: { value: "currentpass" },
+    });
+    fireEvent.change(screen.getByLabelText(/^New password$/i), {
+      target: { value: "newpassword" },
+    });
+    fireEvent.change(screen.getByLabelText(/Confirm new password/i), {
+      target: { value: "newpassword" },
+    });
+
+    const submit = screen.getByRole("button", { name: /Update password/i });
+    fireEvent.click(submit);
+
+    await waitFor(() => {
+      expect(
+        screen.getByText(/Password updated successfully\./i),
+      ).toBeInTheDocument();
+      expect(submit).not.toBeDisabled();
+    });
+  });
+
+  it("should reset busy flag after a non-ok response (button re-enabled)", async () => {
+    vi.stubGlobal(
+      "fetch",
+      vi.fn().mockResolvedValue({
+        ok: false,
+        json: vi.fn().mockResolvedValue({ error: "oops" }),
+      } as any),
+    );
+
+    render(<ProfilePage />);
+    fireEvent.change(screen.getByLabelText(/Current password/i), {
+      target: { value: "current" },
+    });
+    fireEvent.change(screen.getByLabelText(/^New password$/i), {
+      target: { value: "newpassword" },
+    });
+    fireEvent.change(screen.getByLabelText(/Confirm new password/i), {
+      target: { value: "newpassword" },
+    });
+
+    const submit = screen.getByRole("button", { name: /Update password/i });
+    fireEvent.click(submit);
+
+    await waitFor(() => {
+      expect(screen.getByText(/oops/i)).toBeInTheDocument();
+      expect(submit).not.toBeDisabled();
+    });
+  });
 });
