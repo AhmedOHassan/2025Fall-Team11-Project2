@@ -88,6 +88,17 @@ SnapMealAI is designed for:
 
 ---
 
+## 🧪 Example Use Cases
+Here are some example scenarios demonstrating how SnapMealAI can be used:
+
+- **Personal Health Tracking:** A user uploads a home-cooked meal photo to estimate calories and identify allergens.
+- **Restaurant Menu Analysis:** A restaurant uses SnapMealAI to auto-generate nutrition labels for menu items.
+- **Delivery Platform Integration:** An online food delivery app integrates SnapMealAI to help users choose healthier meals.
+
+(Additional real-world case studies will be added after pilot testing.)
+
+---
+
 ## 🛠️ Setup & Installation
 
 To run SnapMealAI locally, follow the full installation guide here: [INSTALL.md](INSTALL.md)
@@ -104,18 +115,6 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for full guidelines.
 ## 📄 License
 
 This project is licensed under the **GNU V3 License**, see the [LICENSE](LICENSE) file for details.
-
----
-
-## 🧪 Example Use Cases
-Here are some example scenarios demonstrating how SnapMealAI can be used:
-
-- **Personal Health Tracking:** A user uploads a home-cooked meal photo to estimate calories and identify allergens.
-- **Restaurant Menu Analysis:** A restaurant uses SnapMealAI to auto-generate nutrition labels for menu items.
-- **Delivery Platform Integration:** An online food delivery app integrates SnapMealAI to help users choose healthier meals.
-
-(Additional real-world case studies will be added after pilot testing.)
-
 
 ---
 
