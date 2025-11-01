@@ -1,6 +1,6 @@
 # SnapMealAI - Complete Software Reference Guide
 
-**Version**: 0.1.0  
+**Version**: TBD
 **Last Updated**: November 1, 2025
 
 This comprehensive guide documents all commands, functions, API endpoints, configuration options, and features available in SnapMealAI.
@@ -768,7 +768,7 @@ npx prisma migrate reset
 
 ## Version History
 
-- **v0.1.0** (November 2025): Initial release with meal analysis, authentication, and profile management
+- **TBD** (November 2025): Initial release with meal analysis, authentication, and profile management
 - Future versions will include meal history, dietary preferences, and enhanced AI analysis
 
 ---
