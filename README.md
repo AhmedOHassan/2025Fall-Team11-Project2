@@ -99,6 +99,30 @@ SnapMealAI is designed for:
 
 ---
 
+## 🧾 Third‑party dependencies
+
+The README highlights key technologies (see "Tech Stack" above), but the authoritative, always‑up‑to‑date list of all runtime and development dependencies lives in the project's manifest:
+
+- Full dependency list: [package.json](package.json)
+
+For convenience, primary runtime dependencies include:
+| Package | Version (package.json) | NPM / Homepage | Type |
+|---|---:|---|---:|
+| next |  ^15.2.3 | https://www.npmjs.com/package/next | Mandatory |
+| react | ^19.0.0 | https://www.npmjs.com/package/react | Mandatory |
+| react-dom | ^19.0.0 | https://www.npmjs.com/package/react-dom | Mandatory |
+| next-auth | 5.0.0-beta.25 | https://www.npmjs.com/package/next-auth | Mandatory |
+| @prisma/client | ^6.5.0 | https://www.npmjs.com/package/@prisma/client | Mandatory |
+| prisma (dev) | ^6.5.0 | https://www.npmjs.com/package/prisma | Optional |
+| openai | ^6.7.0 | https://www.npmjs.com/package/openai | Mandatory |
+| tailwindcss (dev) | ^4.0.15 | https://www.npmjs.com/package/tailwindcss | Optional |
+| zod | ^3.24.2 | https://www.npmjs.com/package/zod | Mandatory |
+| bcrypt | ^6.0.0 | https://www.npmjs.com/package/bcrypt | Mandatory |
+| lucide-react | ^0.545.0 | https://www.npmjs.com/package/lucide-react | Mandatory |
+| @radix-ui/* | (various) | https://www.npmjs.com/search?q=%40radix-ui | Mandatory |
+
+---
+
 ## 🧪 Example Use Cases
 Here are some example scenarios demonstrating how SnapMealAI can be used:
 
@@ -167,6 +191,32 @@ For developer onboarding, follow CONTRIBUTING.md and include repro steps, logs, 
 
 --- 
 
+## ♿ Accessibility
+
+We aim for WCAG 2.1 AA and strive to make SnapMeal AI usable by everyone. Key accessibility features include:
+
+- Semantic HTML and landmark regions for screen-reader friendliness  
+- Keyboard navigation and focus-visible styles for interactive controls  
+- High-contrast color support and accessible color tokens  
+- Reduced motion options respected where supported  
+- ARIA attributes used only when necessary, with clear labels and roles
+
+If you find an accessibility issue, please report it via a GitHub Issue and include:
+- Steps to reproduce
+- Browser and OS
+- A screenshot or short screencast (if possible)
+- Expected vs actual behavior
+
+### 📘 Documentation Accessibility
+
+Docs follow accessible authoring practices:
+- Clear heading hierarchy (H1 → H2 → H3)
+- Descriptive link text and meaningful alt text for images
+- Code examples are copy-paste friendly
+- Tables include headers and captions when helpful
+
+--- 
+
 ## 📄 License
 
 This project is licensed under the **GNU V3 License**, see the [LICENSE](LICENSE) file for details.
@@ -176,11 +226,3 @@ This project is licensed under the **GNU V3 License**, see the [LICENSE](LICENSE
 ## 🌍 Authors & Team
 
 ## **Team 11 (Ahmed Hassan, Nolan Witt, JC Migaly, Shounak Deshmukh)**
-
-## Accessibility
-
-We aim for WCAG 2.1 AA. The UI uses semantic HTML, Radix UI primitives, and shadcn/ui. We support keyboard navigation, visible focus states, high contrast, and reduced motion. Please report issues via GitHub Issues.
-
-### Documentation Accessibility
-
-Docs use semantic headings (H1→H2→H3), descriptive link text, and alt text for images. Code examples are copy‑pasteable. Tables include headers and captions where helpful.
