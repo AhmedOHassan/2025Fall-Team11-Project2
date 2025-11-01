@@ -112,16 +112,31 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for full guidelines.
 
 ---
 
-## ❓ Getting Help
+## ❓ Getting Help & Support
 
-Yes. For help using SnapMealAI, contact the team:
+We provide community and developer support via these channels:
 
-- Ahmed Hassan — aohassan@ncsu.edu  
-- Nolan Witt — nbwitt@ncsu.edu  
-- JC Migaly — jmigaly@ncsu.edu  
-- Shounak Deshmukh — sdeshmu4@ncsu.edu
+- Official support email (preferred — sole user-facing support address):
+  - snapmealai@gmail.com
 
-You can also open an issue or start a discussion in this repository for public support.
+- Individual emails (for direct contact / escalations):
+  - Ahmed Hassan — aohassan@ncsu.edu  
+  - Nolan Witt — nbwitt@ncsu.edu  
+  - JC Migaly — jmigaly@ncsu.edu  
+  - Shounak Deshmukh — sdeshmu4@ncsu.edu
+
+- Repository support:
+  - Open an [issue](https://github.com/AhmedOHassan/2025Fall-Team11-Project2/issues) for bugs or feature requests.
+  - Start a [discussion](https://github.com/AhmedOHassan/2025Fall-Team11-Project2/discussions) for general questions.
+  - See CONTRIBUTING.md for developer guidelines and how to submit PRs.
+  - Follow CODE_OF_CONDUCT.md for community interaction rules.
+
+Support scope and response expectations:
+- We handle user help, bug triage, and guidance for contributors.
+- Typical response time: aim to reply to issues/emails within 3 business days. Complex developer questions or feature requests may take longer.
+- This repository provides community support only (no guaranteed SLA or commercial support).
+
+For developer onboarding, follow CONTRIBUTING.md and include repro steps, logs, and environment info when reporting issues.
 
 --- 
 
