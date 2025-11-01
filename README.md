@@ -167,6 +167,14 @@ Step-by-step usage instructions, screenshots, and walkthroughs are available in 
 
 ---
 
+### 📚 Comprehensive Software Reference
+
+A complete reference of all commands, API endpoints, database schema, environment variables, deployment steps, and troubleshooting is available:
+
+- Read the full software reference: [API_REFERENCE.md](API_REFERENCE.md)
+
+---
+
 ## 🎥 Video Tutorial
 
 Watch a short walkthrough of the app on YouTube:
