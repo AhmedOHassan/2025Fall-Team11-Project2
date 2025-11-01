@@ -255,7 +255,11 @@ export default function MainPage() {
 
       {/* Error Display */}
       {error && (
-        <Alert className="mb-6 border-red-200 bg-red-50 dark:bg-red-900/20">
+        <Alert
+          role="alert"
+          aria-live="assertive"
+          className="mb-6 border-red-200 bg-red-50 dark:bg-red-900/20"
+        >
           <AlertTriangle className="h-4 w-4 text-red-600" />
           <p className="text-red-800 dark:text-red-200">{error}</p>
         </Alert>
@@ -266,7 +270,11 @@ export default function MainPage() {
         <>
           {/* Warnings */}
           {analysis.warnings && analysis.warnings.length > 0 && (
-            <Alert className="mb-6 border-orange-200 bg-orange-50 dark:bg-orange-900/20">
+            <Alert
+              role="status"
+              aria-live="polite"
+              className="mb-6 border-orange-200 bg-orange-50 dark:bg-orange-900/20"
+            >
               <AlertTriangle className="h-4 w-4 text-orange-600" />
               <div>
                 {analysis.warnings.map((warning, index) => (
