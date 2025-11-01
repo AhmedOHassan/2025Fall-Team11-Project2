@@ -198,6 +198,15 @@ For developer onboarding, follow CONTRIBUTING.md and include repro steps, logs, 
 
 --- 
 
+## 💸 Funding & Financial Support
+
+- Short answer: This project is self‑funded by the project contributors (no external grants, sponsors, or commercial funding at this time).  
+- Period: Funding is provided from contributor resources on an ongoing basis and is not tied to any guaranteed external funding period.  
+- Updates: If external funding or sponsorship is secured in the future, this section will be updated with details (funder name, amount, and the funding period).  
+- Contact: For questions about funding or sponsorship opportunities, see the "Getting Help & Support" section above.
+
+---
+
 ## ♿ Accessibility
 
 We aim for WCAG 2.1 AA and strive to make SnapMeal AI usable by everyone. Key accessibility features include:
