@@ -32,24 +32,27 @@ SnapMealAI helps users make informed, healthy meal decisions by analyzing food i
 It provides instant ingredient recognition, calorie estimation, allergen alerts, and dietary suggestions, all in one snap!
 
 ---
-
 ## 🚀 Our Mission
+Ordering food online is convenient, but users often don’t know what’s in their meal, especially for visually complex or homemade dishes. Restaurants also struggle to communicate nutritional details quickly. **SnapMealAI** bridges this gap with AI-powered food understanding.
 
-Ordering food online is convenient, but users often don’t know what’s in their meal, especially for visually complex or homemade dishes. Restaurants also struggle to communicate nutritional details quickly.
-
-**SnapMealAI** bridges this gap with AI-powered food understanding.
-
-### 🧠 How It Works
-1. Upload or take a photo of a meal or menu.  
-2. AI analyzes the image/text to identify ingredients.  
+## 🧠 How It Works
+1. Upload a photo of a meal or menu.  
+2. AI analyzes the image to identify ingredients.  
 3. SnapMealAI estimates calories, macros, and allergens.  
 4. It provides personalized recommendations, including healthier alternatives and portion suggestions.
 
-### 💡 Impact
+## 💡 Impact
 - **Customers:** Make informed and healthier food choices.  
 - **Restaurants:** Provide nutrition transparency and build trust.  
 - **Delivery Platforms/Admins:** Differentiate with AI value-added insights.  
 - **Healthcare Partners:** Integrate AI-driven nutrition analysis with wellness platforms.
+
+ ## 🎯 Target Users
+SnapMealAI is designed for:
+- **Consumers** who want instant nutritional and allergen insights for meals and menus.
+- **Restaurants** seeking to provide transparent nutrition information to customers.
+- **Food delivery services** integrating AI-based meal analysis for added user value.
+- **Healthcare & wellness partners** who want to monitor or recommend dietary habits through AI.
 
 ---
 
@@ -101,6 +104,18 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for full guidelines.
 ## 📄 License
 
 This project is licensed under the **GNU V3 License**, see the [LICENSE](LICENSE) file for details.
+
+---
+
+## 🧪 Example Use Cases
+Here are some example scenarios demonstrating how SnapMealAI can be used:
+
+- **Personal Health Tracking:** A user uploads a home-cooked meal photo to estimate calories and identify allergens.
+- **Restaurant Menu Analysis:** A restaurant uses SnapMealAI to auto-generate nutrition labels for menu items.
+- **Delivery Platform Integration:** An online food delivery app integrates SnapMealAI to help users choose healthier meals.
+
+(Additional real-world case studies will be added after pilot testing.)
+
 
 ---
 
