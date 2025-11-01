@@ -1,4 +1,4 @@
-# SnapMeal AI — User Guide
+# User Guide
 
 This guide explains how to use the SnapMeal AI web app (sign up, sign in, upload a meal image, view analysis, profile & sign out).
 
