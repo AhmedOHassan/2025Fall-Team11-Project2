@@ -30,6 +30,7 @@
 [![Pull Requests](https://img.shields.io/github/issues-pr/AhmedOHassan/2025Fall-Team11-Project2)](https://github.com/AhmedOHassan/2025Fall-Team11-Project2/pulls)
 
 <!-- Project Stats -->
+
 [![Forks](https://img.shields.io/github/forks/AhmedOHassan/2025Fall-Team11-Project2)](https://github.com/AhmedOHassan/2025Fall-Team11-Project2/network/members)
 [![Stars](https://img.shields.io/github/stars/AhmedOHassan/2025Fall-Team11-Project2)](https://github.com/AhmedOHassan/2025Fall-Team11-Project2/stargazers)
 [![Contributors](https://img.shields.io/github/contributors/AhmedOHassan/2025Fall-Team11-Project2)](https://github.com/AhmedOHassan/2025Fall-Team11-Project2/graphs/contributors)
@@ -42,7 +43,9 @@ SnapMealAI helps users make informed, healthy meal decisions by analyzing food i
 It provides instant ingredient recognition, calorie estimation, allergen alerts, and dietary suggestions, all in one snap!
 
 ---
+
 ## 🚀 Our Mission
+
 Ordering food online is convenient, but users often don’t know what’s in their meal, especially for visually complex or homemade dishes. Restaurants also struggle to communicate nutritional details quickly. **SnapMealAI** bridges this gap with AI-powered food understanding.
 
 Ordering food online is convenient, but users often don’t know what’s in their meal, especially for visually complex or homemade dishes. Restaurants also struggle to communicate nutritional details quickly.
@@ -63,8 +66,10 @@ Ordering food online is convenient, but users often don’t know what’s in the
 - **Delivery Platforms/Admins:** Differentiate with AI value-added insights.
 - **Healthcare Partners:** Integrate AI-driven nutrition analysis with wellness platforms.
 
- ## 🎯 Target Users
+## 🎯 Target Users
+
 SnapMealAI is designed for:
+
 - **Consumers** who want instant nutritional and allergen insights for meals and menus.
 - **Restaurants** seeking to provide transparent nutrition information to customers.
 - **Food delivery services** integrating AI-based meal analysis for added user value.
@@ -115,7 +120,7 @@ The README highlights key technologies (see "Tech Stack" above), but the authori
 For convenience, primary runtime dependencies include:
 | Package | Version (package.json) | NPM / Homepage | Type |
 |---|---:|---|---:|
-| next |  ^15.2.3 | https://www.npmjs.com/package/next | Mandatory |
+| next | ^15.2.3 | https://www.npmjs.com/package/next | Mandatory |
 | react | ^19.0.0 | https://www.npmjs.com/package/react | Mandatory |
 | react-dom | ^19.0.0 | https://www.npmjs.com/package/react-dom | Mandatory |
 | next-auth | 5.0.0-beta.25 | https://www.npmjs.com/package/next-auth | Mandatory |
@@ -126,11 +131,12 @@ For convenience, primary runtime dependencies include:
 | zod | ^3.24.2 | https://www.npmjs.com/package/zod | Mandatory |
 | bcrypt | ^6.0.0 | https://www.npmjs.com/package/bcrypt | Mandatory |
 | lucide-react | ^0.545.0 | https://www.npmjs.com/package/lucide-react | Mandatory |
-| @radix-ui/* | (various) | https://www.npmjs.com/search?q=%40radix-ui | Mandatory |
+| @radix-ui/\* | (various) | https://www.npmjs.com/search?q=%40radix-ui | Mandatory |
 
 ---
 
 ## 🧪 Example Use Cases
+
 Here are some example scenarios demonstrating how SnapMealAI can be used:
 
 - **Personal Health Tracking:** A user uploads a home-cooked meal photo to estimate calories and identify allergens.
@@ -144,6 +150,12 @@ Here are some example scenarios demonstrating how SnapMealAI can be used:
 ## 🛠️ Setup & Installation
 
 To run SnapMealAI locally, follow the full installation guide here: [INSTALL.md](INSTALL.md)
+
+---
+
+## 🧯 Troubleshooting
+
+For common issues and step‑by‑step fixes, see [TROUBLESHOOTING.md](TROUBLESHOOTING.md).
 
 ---
 
@@ -178,9 +190,9 @@ We provide community and developer support via these channels:
   - snapmealai@gmail.com
 
 - Individual emails (for direct contact / escalations):
-  - Ahmed Hassan — aohassan@ncsu.edu  
-  - Nolan Witt — nbwitt@ncsu.edu  
-  - JC Migaly — jmigaly@ncsu.edu  
+  - Ahmed Hassan — aohassan@ncsu.edu
+  - Nolan Witt — nbwitt@ncsu.edu
+  - JC Migaly — jmigaly@ncsu.edu
   - Shounak Deshmukh — sdeshmu4@ncsu.edu
 
 - Repository support:
@@ -190,19 +202,20 @@ We provide community and developer support via these channels:
   - Follow CODE_OF_CONDUCT.md for community interaction rules.
 
 Support scope and response expectations:
+
 - We handle user help, bug triage, and guidance for contributors.
 - Typical response time: aim to reply to issues/emails within 3 business days. Complex developer questions or feature requests may take longer.
 - This repository provides community support only (no guaranteed SLA or commercial support).
 
 For developer onboarding, follow CONTRIBUTING.md and include repro steps, logs, and environment info when reporting issues.
 
---- 
+---
 
 ## 💸 Funding & Financial Support
 
-- Short answer: This project is self‑funded by the project contributors (no external grants, sponsors, or commercial funding at this time).  
-- Period: Funding is provided from contributor resources on an ongoing basis and is not tied to any guaranteed external funding period.  
-- Updates: If external funding or sponsorship is secured in the future, this section will be updated with details (funder name, amount, and the funding period).  
+- Short answer: This project is self‑funded by the project contributors (no external grants, sponsors, or commercial funding at this time).
+- Period: Funding is provided from contributor resources on an ongoing basis and is not tied to any guaranteed external funding period.
+- Updates: If external funding or sponsorship is secured in the future, this section will be updated with details (funder name, amount, and the funding period).
 - Contact: For questions about funding or sponsorship opportunities, see the "Getting Help & Support" section above.
 
 ---
@@ -211,13 +224,14 @@ For developer onboarding, follow CONTRIBUTING.md and include repro steps, logs, 
 
 We aim for WCAG 2.1 AA and strive to make SnapMeal AI usable by everyone. Key accessibility features include:
 
-- Semantic HTML and landmark regions for screen-reader friendliness  
-- Keyboard navigation and focus-visible styles for interactive controls  
-- High-contrast color support and accessible color tokens  
-- Reduced motion options respected where supported  
+- Semantic HTML and landmark regions for screen-reader friendliness
+- Keyboard navigation and focus-visible styles for interactive controls
+- High-contrast color support and accessible color tokens
+- Reduced motion options respected where supported
 - ARIA attributes used only when necessary, with clear labels and roles
 
 If you find an accessibility issue, please report it via a GitHub Issue and include:
+
 - Steps to reproduce
 - Browser and OS
 - A screenshot or short screencast (if possible)
@@ -226,12 +240,13 @@ If you find an accessibility issue, please report it via a GitHub Issue and incl
 ### 📘 Documentation Accessibility
 
 Docs follow accessible authoring practices:
+
 - Clear heading hierarchy (H1 → H2 → H3)
 - Descriptive link text and meaningful alt text for images
 - Code examples are copy-paste friendly
 - Tables include headers and captions when helpful
 
---- 
+---
 
 ## 📄 License
 
