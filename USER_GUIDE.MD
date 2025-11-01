@@ -26,7 +26,7 @@ What it does:
 - Intro and product pitch.
 - Links to Sign Up and Login.
 
-![LandingPage](landing.png)
+![LandingPage](https://github.com/AhmedOHassan/2025Fall-Team11-Project2/blob/project2-dev/public/landing.png)
 
 How to use:
 1. Click "Sign Up" to create an account, or "Login" if you already have one.
@@ -42,7 +42,7 @@ What it does:
   - All fields required.
   - Password must be at least 6 characters.
 
-![SingUpPage](signup.png)
+![SingUpPage](https://github.com/AhmedOHassan/2025Fall-Team11-Project2/blob/project2-dev/public/signup.png)
 
 How to use:
 1. Fill Full name, Email, Password.
@@ -58,7 +58,7 @@ What it does:
 - Sign in with email + password.
 - On success redirects to the main dashboard (/home).
 
-![LoginPage](login.png)
+![LoginPage](https://github.com/AhmedOHassan/2025Fall-Team11-Project2/blob/project2-dev/public/login.png)
 
 How to use:
 1. Enter Email and Password.
@@ -74,9 +74,9 @@ What it does:
 - Upload or drag & drop an image of a meal.
 - Displays analysis: ingredients, nutrition, allergens, portion, alternatives, delivery guidance, warnings, health score.
 
-![AnalysisPageUpload](analysis_upload.png)
-![AnalysisPageResult1](analysis_result_1.png)
-![AnalysisPageResult2](analysis_result_2.png)
+![AnalysisPageUpload](https://github.com/AhmedOHassan/2025Fall-Team11-Project2/blob/project2-dev/public/analysis_upload.png)
+![AnalysisPageResult1](https://github.com/AhmedOHassan/2025Fall-Team11-Project2/blob/project2-dev/public/analysis_result_1.png)
+![AnalysisPageResult2](https://github.com/AhmedOHassan/2025Fall-Team11-Project2/blob/project2-dev/public/analysis_result_2.png)
 
 How to use:
 1. Click the upload area or drag & drop an image (PNG, JPEG, WEBP, GIF).
@@ -94,8 +94,8 @@ What it does:
 - Reset password.
 - Sign out from the header menu.
 
-![Header](header_name_click.png)
-![MyProfilePage](my_profile.png)
+![Header](https://github.com/AhmedOHassan/2025Fall-Team11-Project2/blob/project2-dev/public/header_name_click.png)
+![MyProfilePage](https://github.com/AhmedOHassan/2025Fall-Team11-Project2/blob/project2-dev/public/my_profile.png)
 
 How to use:
 1. Click your name in the top-right to open the user menu.
