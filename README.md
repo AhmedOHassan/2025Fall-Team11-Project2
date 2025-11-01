@@ -120,7 +120,7 @@ To run SnapMealAI locally, follow the full installation guide here: [INSTALL.md]
 
 Step-by-step usage instructions, screenshots, and walkthroughs are available in the project user guide:
 
-- Read the user guide: [user_guide.md](./user_guide.md)
+- Read the user guide: [USER_GUIDE.md](USER_GUIDE.md)
 
 --- 
 
